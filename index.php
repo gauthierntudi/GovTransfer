@@ -251,6 +251,9 @@
           background-color: #3498db;
           color: white;
         }
+        .color-gey{
+            color: #cbcbcd;
+        }
     </style>
 </head>
 <body>
@@ -299,7 +302,7 @@
                 <div class="card p-3 content-div">
                     <div class="card-body">
                         <div class="drop-zone mb-3" id="dropZone">
-                            <i class="fa-solid fa-circle-plus fa-3x mb-2 text-primary"></i>
+                            <i class="fa-solid fa-circle-plus fa-3x mb-2 color-gey" onclick="document.getElementById('fileInput').click()"></i>
                             <p class="mb-2 actr">Glissez et déposez vos fichiers ou dossiers ici</p>
                             <p class="mb-2 actr">ou</p>
                             <button class="btn btn-primary me-2 corners actr" onclick="document.getElementById('fileInput').click()"> <i class="fa-solid fa-circle-plus"></i> Des fichiers</button>
