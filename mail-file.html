@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargement de fichiers</title>
+    <style>
+        @font-face { font-family: trans; src: url('https://backgrounds.wetransfer.net/creator/wetransfer/2211-refresh/static-2/1_GQft9D/GT-Super-WT-Super.755cfa9556fcd80148ce.woff2');}
+        @font-face { font-family: actb; src: url('https://backgrounds.wetransfer.net/creator/wetransfer/2211-refresh/static-2/1_GQft9D/ActiefGrotesque_W_Md.23817d3ab6c377c0a652.woff2');}
+        @font-face { font-family: actm; src: url('https://backgrounds.wetransfer.net/creator/wepresent/2406-p10-2/wp2_ver3/1_bTcJY7/FaktPro-Normal.b13a72e7c98c850685bd.woff2');}
+        @font-face { font-family: actr; src: url('https://backgrounds.wetransfer.net/creator/wetransfer/2211-refresh/static-2/1_GQft9D/ActiefGrotesque_W_Rg.63479c54248fa038db83.woff2');}
+        .actm { font-family: actm!important; }
+        .actr { font-family: actr!important; }
+        .actb { font-family: actb!important; }
+        .trans { font-family: trans!important; }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #0256d3;
+            text-decoration: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border-radius: 30px!important;
+            margin-top: 30px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 0px solid #ddd;
+        }
+
+
+        th:first-child, td:first-child {
+            border-top-left-radius: 20px;
+        }
+
+        th:last-child, td:last-child {
+            border-top-right-radius: 20px;
+        }
+
+        td {
+            font-family: actr!important;
+        }
+
+        th {
+            font-family: actb!important;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .logo {
+                font-size: 2em;
+            }
+
+            .button {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo trans">
+        <span style="color: #000000;">Gouv</span><span style="color:#0256d3">Transfer</span>
+    </div>
+
+    <h1 class="actb">Téléchargement de fichiers</h1>
+
+    <p class="actr">Votre fichier est prêt à être téléchargé. Cliquez sur le bouton ci-dessous pour commencer le téléchargement :</p>
+
+    <table>
+        <tr>
+            <th>Fichier ou Dossier</th>
+            <th>Taille</th>
+        </tr>
+        <tr>
+            <td>example.zip</td>
+            <td>15 MB</td>
+        </tr>
+        <!-- Ajoutez d'autres lignes ici si nécessaire -->
+    </table>
+
+    <p style="text-align: center;">
+        <a href="YOUR_DOWNLOAD_LINK" class="button actb">Télécharger le fichier</a>
+    </p>
+
+    <p class="actr">
+        Si vous n'avez pas demandé ce téléchargement, veuillez ignorer cet e-mail. Si vous avez des questions, n'hésitez pas à nous contacter à <a href="mailto:admin@gouv.space">admin@gouv.space</a>.
+    </p>
+
+    <p class="trans" style="color:#7a7a7a">GouvTransfer</p>
+
+    <div class="footer">
+        <p class="actr"><span class="trans">GouvTransfer</span>, outil magnifiquement évident pour faire avancer vos idées en toute simplicité.</p>
+        <p class="actr" style="font-size: 12px;">
+            Transfert des fichiers, des dossiers et autres.
+            <br>
+            Le transfert sécurisé, à portée de main.
+        </p>
+    </div>
+</body>
+</html>
