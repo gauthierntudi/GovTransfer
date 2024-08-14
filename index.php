@@ -50,11 +50,16 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
             gap: 10px;
+            max-height: 200px; /* Set maximum height */
+            overflow-y: auto;  /* Enable vertical scrolling */
+            border: 1px solid #dee2e6; /* Optional: border for visual distinction */
+            padding: 10px;
+            border-radius: 20px;
         }
         .file-item, .folder-item {
             position: relative;
             border: 1px solid #dee2e6;
-            border-radius: 4px;
+            border-radius: 10px;
             padding: 10px;
             text-align: center;
             display: flex;
@@ -186,8 +191,6 @@
           text-align: center;
         }
 
-        
-
         .progress-circle {
           position: relative;
           width: 100px;
@@ -247,366 +250,356 @@
           transition: background-color 0.3s, color 0.3s;
         }
 
-        .cancel-button:hover {
-          background-color: #3498db;
-          color: white;
-        }
-        .color-gey{
-            color: #cbcbcd;
-        }
-    </style>
+
+.cancel-button:hover {
+      background-color: #3498db;
+      color: white;
+    }
+    .color-gey{
+        color: #cbcbcd;
+    }
+</style>
 </head>
 <body>
     <div class="container py-5">
         <h1 class="text-center text-primary mb-4" style="font-family: trans;"><span style="color: #ffffff;">Gouv</span><span style="color:#0256d3">Transfer</span></h1>
-
-
-    <!-- /Chargemet transfert -->
-
-        <div class="modal-overlay">
-            
-            <!-- Le contenu du div pourcentage -->
-            <div class="transfer-container">
-              <div class="progress-circle">
-                <svg viewBox="0 0 36 36" class="circular-chart">
-                  <path class="circle-bg"
-                    d="M18 2.0845
-                      a 15.9155 15.9155 0 0 1 0 31.831
-                      a 15.9155 15.9155 0 0 1 0 -31.831"
-                  />
-                  <path class="circle"
-                    stroke-dasharray="30, 100"
-                    d="M18 2.0845
-                      a 15.9155 15.9155 0 0 1 0 31.831
-                      a 15.9155 15.9155 0 0 1 0 -31.831"
-                  />
-                </svg>
-                <div class="percentage trans">35%</div>
-              </div>
-              <div class="transfer-text actb">Transfert en cours...</div>
-              <div class="transfer-details actr">32.9 MB sur 111.0 MB envoyés</div>
-              <div class="transfer-time actr">Il reste environ 1 minute</div>
-              <button class="cancel-button actm" onclick="cancel()">Annuler</button>
-            </div>
-            <!-- /Le contenu du div pourcentage -->
-
+<div class="modal-overlay">
+        <!-- Le contenu du div pourcentage -->
+        <div class="transfer-container">
+          <div class="progress-circle">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+              <path class="circle-bg"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <path class="circle"
+                stroke-dasharray="30, 100"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+            </svg>
+            <div class="percentage trans">35%</div>
+          </div>
+          <div class="transfer-text actb">Transfert en cours...</div>
+          <div class="transfer-details actr">32.9 MB sur 111.0 MB envoyés</div>
+          <div class="transfer-time actr">Il reste environ 1 minute</div>
+          <button class="cancel-button actm" onclick="cancel()">Annuler</button>
         </div>
+        <!-- /Le contenu du div pourcentage -->
+    </div>
 
-    <!-- /Chargemet transfert -->
-
-        
-
-
-        <div class="row justify-content-center">
-            <div class="col-md-5">
-                <div class="card p-3 content-div">
-                    <div class="card-body">
-                        <div class="drop-zone mb-3" id="dropZone">
-                            <i class="fa-solid fa-circle-plus fa-3x mb-2 color-gey" onclick="document.getElementById('fileInput').click()"></i>
-                            <p class="mb-2 actr">Glissez et déposez vos fichiers ou dossiers ici</p>
-                            <p class="mb-2 actr">ou</p>
-                            <button class="btn btn-primary me-2 corners actr" onclick="document.getElementById('fileInput').click()"> <i class="fa-solid fa-circle-plus"></i> Des fichiers</button>
-                            <button class="btn btn-dark corners actr" onclick="document.getElementById('folderInput').click()"><i class="fa-solid fa-folder-plus"></i> Un dossier</button>
-                            <input type="file" id="fileInput" multiple class="d-none">
-                            <input type="file" id="folderInput" webkitdirectory directory multiple class="d-none">
-                        </div>
-                        <div id="filePreview" class="file-preview mb-3"></div>
-                        <form id="transferForm">
-                            <div class="mb-3">
-                                <input type="email" class="form-control form-control-lg form-input-text" id="senderEmail" name="senderEmail" placeholder="Email expéditeur">
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control form-control-lg form-input-text" id="senderName" placeholder="Nom de l'expéditeur (optionnel)" name="senderName">
-                            </div>
-                            <div class="mb-3">
-                                <div class="tags-input" id="recipientEmailsContainer">
-                                    <input type="text" id="recipientEmailsInput" placeholder="Ajoutez des emails" class="form-control-plaintext">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control form-control-lg form-input-text" id="message" name="message" rows="2" placeholder="Votre message (optionnel)"></textarea>
-                            </div>
-                            <div class=" mt-3 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg w-50 corners trans">
-                                    Transférer
-                                    <i class="fa-solid fa-paper-plane"></i>
-                                </button>
-                            </div>
-                        </form>
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card p-3 content-div">
+                <div class="card-body">
+                    <div class="drop-zone mb-3" id="dropZone">
+                        <i class="fa-solid fa-circle-plus fa-3x mb-2 color-gey" onclick="document.getElementById('fileInput').click()"></i>
+                        <p class="mb-2 actr">Glissez et déposez vos fichiers ou dossiers ici</p>
+                        <p class="mb-2 actr">ou</p>
+                        <button class="btn btn-primary me-2 corners actr" onclick="document.getElementById('fileInput').click()"> <i class="fa-solid fa-circle-plus"></i> Des fichiers</button>
+                        <button class="btn btn-dark corners actr" onclick="document.getElementById('folderInput').click()"><i class="fa-solid fa-folder-plus"></i> Un dossier</button>
+                        <input type="file" id="fileInput" multiple class="d-none">
+                        <input type="file" id="folderInput" webkitdirectory directory multiple class="d-none">
                     </div>
+                    <div id="filePreview" class="file-preview mb-3"></div>
+                    <form id="transferForm">
+                        <div class="mb-3">
+                            <input type="email" class="form-control form-control-lg form-input-text" id="senderEmail" name="senderEmail" placeholder="Email expéditeur">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg form-input-text" id="senderName" placeholder="Nom de l'expéditeur (optionnel)" name="senderName">
+                        </div>
+                        <div class="mb-3">
+                            <div class="tags-input" id="recipientEmailsContainer">
+                                <input type="text" id="recipientEmailsInput" placeholder="Ajoutez des emails" class="form-control-plaintext">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control form-control-lg form-input-text" id="message" name="message" rows="2" placeholder="Votre message (optionnel)"></textarea>
+                        </div>
+                        <div class=" mt-3 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-50 corners trans">
+                                Transférer
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const dropZone = document.getElementById('dropZone');
-        const fileInput = document.getElementById('fileInput');
-        const folderInput = document.getElementById('folderInput');
-        const filePreview = document.getElementById('filePreview');
-        const transferForm = document.getElementById('transferForm');
-        const recipientEmailsContainer = document.getElementById('recipientEmailsContainer');
-        const recipientEmailsInput = document.getElementById('recipientEmailsInput');
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileInput');
+    const folderInput = document.getElementById('folderInput');
+    const filePreview = document.getElementById('filePreview');
+    const transferForm = document.getElementById('transferForm');
+    const recipientEmailsContainer = document.getElementById('recipientEmailsContainer');
+    const recipientEmailsInput = document.getElementById('recipientEmailsInput');
 
-        let files = [];
-        let folders = [];
-        let recipientEmails = [];
+    let files = [];
+    let folders = [];
+    let recipientEmails = [];
 
-        dropZone.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropZone.style.backgroundColor = '#f8f9fa';
-        });
+    dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.style.backgroundColor = '#f8f9fa';
+    });
 
-        dropZone.addEventListener('dragleave', () => {
-            dropZone.style.backgroundColor = '';
-        });
+    dropZone.addEventListener('dragleave', () => {
+        dropZone.style.backgroundColor = '';
+    });
 
-        dropZone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropZone.style.backgroundColor = '';
-            handleDroppedItems(e.dataTransfer.items);
-        });
+    dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.style.backgroundColor = '';
+        handleDroppedItems(e.dataTransfer.items);
+    });
 
-        fileInput.addEventListener('change', () => {
-            handleFiles(fileInput.files);
-        });
+    fileInput.addEventListener('change', () => {
+        handleFiles(fileInput.files);
+    });
 
-        folderInput.addEventListener('change', (e) => {
-            const files = e.target.files;
-            if (files.length > 0) {
-                const folderName = files[0].webkitRelativePath.split('/')[0];
-                const fileCount = files.length;
-                const subFolderCount = new Set(Array.from(files).map(file => 
-                    file.webkitRelativePath.split('/').slice(1, -1).join('/')
-                )).size;
-                const totalSize = Array.from(files).reduce((total, file) => total + file.size, 0);
+    folderInput.addEventListener('change', (e) => {
+        const files = e.target.files;
+        if (files.length > 0) {
+            const folderName = files[0].webkitRelativePath.split('/')[0];
+            const fileCount = files.length;
+            const subFolderCount = new Set(Array.from(files).map(file => 
+                file.webkitRelativePath.split('/').slice(1, -1).join('/')
+            )).size;
+            const totalSize = Array.from(files).reduce((total, file) => total + file.size, 0);
 
-                folders.push({
-                    name: folderName,
-                    fileCount: fileCount,
-                    subFolderCount: subFolderCount,
-                    size: totalSize,
-                    files: files
-                });
-                updateFilePreview();
-            }
-        });
-
-        function handleDroppedItems(items) {
-            for (let item of items) {
-                if (item.kind === 'file') {
-                    const entry = item.webkitGetAsEntry();
-                    if (entry) {
-                        if (entry.isDirectory) {
-                            processDirectory(entry);
-                        } else {
-                            addFile(item.getAsFile());
-                        }
-                    }
-                }
-            }
+            folders.push({
+                name: folderName,
+                fileCount: fileCount,
+                subFolderCount: subFolderCount,
+                size: totalSize,
+                files: files
+            });
+            updateFilePreview();
         }
+    });
 
-        function processDirectory(directoryEntry) {
-            let reader = directoryEntry.createReader();
-            let filesAndFolders = [];
-
-            function readEntries() {
-                reader.readEntries((entries) => {
-                    if (entries.length) {
-                        entries.forEach((entry) => {
-                            if (entry.isFile) {
-                                entry.file((file) => {
-                                    filesAndFolders.push(file);
-                                });
-                            } else if (entry.isDirectory) {
-                                processDirectory(entry);
-                            }
-                        });
-                        readEntries(); // Continue reading if there are more entries
+    function handleDroppedItems(items) {
+        for (let item of items) {
+            if (item.kind === 'file') {
+                const entry = item.webkitGetAsEntry();
+                if (entry) {
+                    if (entry.isDirectory) {
+                        processDirectory(entry);
                     } else {
-                        // All entries have been read
-                        addFolder({
-                            name: directoryEntry.name,
-                            fileCount: filesAndFolders.filter(item => item instanceof File).length,
-                            subFolderCount: filesAndFolders.filter(item => !(item instanceof File)).length,
-                            size: filesAndFolders.reduce((total, file) => total + (file.size || 0), 0),
-                            files: filesAndFolders
-                        });
+                        addFile(item.getAsFile());
                     }
-                });
-            }
-
-            readEntries();
-        }
-
-        function addFolder(folderData) {
-            folders.push(folderData);
-            updateFilePreview();
-        }
-
-        function handleFiles(newFiles) {
-            Array.from(newFiles).forEach(file => addFile(file));
-        }
-
-        function addFile(file) {
-            if (!files.some(f => f.name === file.name && f.size === file.size)) {
-                files.push({
-                    file: file,
-                    size: file.size
-                });
-                updateFilePreview();
-            }
-        }
-
-        function updateFilePreview() {
-            filePreview.innerHTML = '';
-            
-            folders.forEach((folder, index) => {
-                const folderItem = document.createElement('div');
-                folderItem.className = 'folder-item';
-                folderItem.innerHTML = `
-                    <div class="folder-name"><i class="fas fa-folder fa-2x text-info"></i><br> ${folder.name}</div>
-                    <div class="folder-info">
-                        ${folder.fileCount} fichier(s), ${folder.subFolderCount} sous-dossier(s)
-                        <br>Taille : ${formatSize(folder.size)}
-                    </div>
-                    <button class="btn btn-sm btn-danger btn-folder-del" onclick="removeFolder(${index})"><i class="fa-solid fa-xmark"></i></button>
-                `;
-                filePreview.appendChild(folderItem);
-            });
-
-            files.forEach((fileObj, index) => {
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                
-                let icon;
-                if (fileObj.file.type.startsWith('image/')) {
-                    icon = document.createElement('img');
-                    icon.src = URL.createObjectURL(fileObj.file);
-                } else {
-                    icon = document.createElement('i');
-                    icon.className = getFileIcon(fileObj.file.type);
                 }
-                
-                const fileName = document.createElement('div');
-                fileName.className = 'file-name';
-                fileName.innerHTML = `${fileObj.file.name}<br><small>${formatSize(fileObj.size)}</small>`;
+            }
+        }
+    }
 
-                const removeButton = document.createElement('span');
-                removeButton.className = 'remove-file badge bg-danger';
-                removeButton.innerHTML = '&times;';
-                removeButton.onclick = () => removeFile(index);
-                
-                fileItem.appendChild(icon);
-                fileItem.appendChild(fileName);
-                fileItem.appendChild(removeButton);
-                filePreview.appendChild(fileItem);
+    function processDirectory(directoryEntry) {
+        let reader = directoryEntry.createReader();
+        let filesAndFolders = [];
+
+        function readEntries() {
+            reader.readEntries((entries) => {
+                if (entries.length) {
+                    entries.forEach((entry) => {
+                        if (entry.isFile) {
+                            entry.file((file) => {
+                                filesAndFolders.push(file);
+                            });
+                        } else if (entry.isDirectory) {
+                            processDirectory(entry);
+                        }
+                    });
+                    readEntries(); // Continue reading if there are more entries
+                } else {
+                    // All entries have been read
+                    addFolder({
+                        name: directoryEntry.name,
+                        fileCount: filesAndFolders.filter(item => item instanceof File).length,
+                        subFolderCount: filesAndFolders.filter(item => !(item instanceof File)).length,
+                        size: filesAndFolders.reduce((total, file) => total + (file.size || 0), 0),
+                        files: filesAndFolders
+                    });
+                }
             });
         }
 
-        function getFileIcon(mimeType) {
-            switch (true) {
-                case mimeType.startsWith('image/'): 
-                    return 'fas fa-file-image fa-2x text-primary';
-                case mimeType === 'application/pdf': 
-                    return 'fas fa-file-pdf fa-2x text-danger';
-                case mimeType === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 
-                    return 'fas fa-file-word fa-2x text-primary';
-                case mimeType === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 
-                    return 'fas fa-file-excel fa-2x text-success';
-                case mimeType === 'application/vnd.openxmlformats-officedocument.presentationml.presentation': 
-                    return 'fas fa-file-powerpoint fa-2x text-warning';
-                default: 
-                    return 'fas fa-file fa-2x text-secondary';
-            }
-        }
+        readEntries();
+    }
 
-        function formatSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const k = 1024;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        }
+    function addFolder(folderData) {
+        folders.push(folderData);
+        updateFilePreview();
+    }
 
-        function removeFile(index) {
-            files.splice(index, 1);
+    function handleFiles(newFiles) {
+        Array.from(newFiles).forEach(file => addFile(file));
+    }
+
+    function addFile(file) {
+        if (!files.some(f => f.name === file.name && f.size === file.size)) {
+            files.push({
+                file: file,
+                size: file.size
+            });
             updateFilePreview();
         }
+    }
 
-        function removeFolder(index) {
-            folders.splice(index, 1);
-            updateFilePreview();
-        }
-
-        recipientEmailsInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ',') {
-                e.preventDefault();
-                addRecipientEmail();
-            }
+    function updateFilePreview() {
+        filePreview.innerHTML = '';
+        
+        folders.forEach((folder, index) => {
+            const folderItem = document.createElement('div');
+            folderItem.className = 'folder-item';
+            folderItem.innerHTML = `
+                <div class="folder-name"><i class="fas fa-folder fa-2x text-info"></i><br> ${folder.name}</div>
+                <div class="folder-info">
+                    ${folder.fileCount} fichier(s), ${folder.subFolderCount} sous-dossier(s)
+                    <br>Taille : ${formatSize(folder.size)}
+                </div>
+                <button class="btn btn-sm btn-danger btn-folder-del" onclick="removeFolder(${index})"><i class="fa-solid fa-xmark"></i></button>
+            `;
+            filePreview.appendChild(folderItem);
         });
 
-        recipientEmailsInput.addEventListener('blur', addRecipientEmail);
-
-        function addRecipientEmail() {
-            const email = recipientEmailsInput.value.trim();
-            if (email && isValidEmail(email) && !recipientEmails.includes(email)) {
-                recipientEmails.push(email);
-                updateRecipientEmailTags();
-                recipientEmailsInput.value = '';
-            }
-        }
-
-        function updateRecipientEmailTags() {
-            const tagsContainer = recipientEmailsContainer.querySelector('.tags') || document.createElement('div');
-            tagsContainer.className = 'tags';
-            tagsContainer.innerHTML = '';
+        files.forEach((fileObj, index) => {
+            const fileItem = document.createElement('div');
+            fileItem.className = 'file-item';
             
-            recipientEmails.forEach((email, index) => {
-                const tag = document.createElement('span');
-                tag.className = 'tag';
-                tag.innerHTML = `
-                    <span>${email}</span>
-                    <span class="tag-remove" onclick="removeRecipientEmail(${index})">&times;</span>
-                `;
-                tagsContainer.appendChild(tag);
-            });
-
-            if (!recipientEmailsContainer.contains(tagsContainer)) {
-                recipientEmailsContainer.insertBefore(tagsContainer, recipientEmailsInput);
+            let icon;
+            if (fileObj.file.type.startsWith('image/')) {
+                icon = document.createElement('img');
+                icon.src = URL.createObjectURL(fileObj.file);
+            } else {
+                icon = document.createElement('i');
+                icon.className = getFileIcon(fileObj.file.type);
             }
-        }
+            
+            const fileName = document.createElement('div');
+            fileName.className = 'file-name';
+            fileName.innerHTML = `${fileObj.file.name}<br><small>${formatSize(fileObj.size)}</small>`;
 
-        function removeRecipientEmail(index) {
-            recipientEmails.splice(index, 1);
-            updateRecipientEmailTags();
-        }
+            const removeButton = document.createElement('span');
+            removeButton.className = 'remove-file badge bg-danger';
+            removeButton.innerHTML = '&times;';
+            removeButton.onclick = () => removeFile(index);
+            
+            fileItem.appendChild(icon);
+            fileItem.appendChild(fileName);
+            fileItem.appendChild(removeButton);
+            filePreview.appendChild(fileItem);
+        });
+    }
 
-        function isValidEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    function getFileIcon(mimeType) {
+        switch (true) {
+            case mimeType.startsWith('image/'): 
+                return 'fas fa-file-image fa-2x text-primary';
+            case mimeType === 'application/pdf': 
+                return 'fas fa-file-pdf fa-2x text-danger';
+            case mimeType === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 
+                return 'fas fa-file-word fa-2x text-primary';
+            case mimeType === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': 
+                return 'fas fa-file-excel fa-2x text-success';
+            case mimeType === 'application/vnd.openxmlformats-officedocument.presentationml.presentation': 
+                return 'fas fa-file-powerpoint fa-2x text-warning';
+            default: 
+                return 'fas fa-file fa-2x text-secondary';
         }
+    }
 
-        function cancel(){
-            // Pour cacher le modal
-            document.querySelector('.modal-overlay').style.display = 'none';
-        }
+    function formatSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
 
-        transferForm.addEventListener('submit', (e) => {
+    function removeFile(index) {
+        files.splice(index, 1);
+        updateFilePreview();
+    }
+
+    function removeFolder(index) {
+        folders.splice(index, 1);
+        updateFilePreview();
+    }
+
+    recipientEmailsInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ',') {
             e.preventDefault();
-            
-            // Ici, vous pouvez ajouter la logique pour envoyer les dossiers, les fichiers et les informations du formulaire\
-            document.querySelector('.modal-overlay').style.display = 'flex';
+            addRecipientEmail();
+        }
+    });
 
-            console.log('Dossiers à envoyer:', folders);
-            console.log('Fichiers individuels à envoyer:', files);
-            console.log('Emails des destinataires:', recipientEmails);
-            console.log('Informations du formulaire:', new FormData(transferForm));
+    recipientEmailsInput.addEventListener('blur', addRecipientEmail);
+
+    function addRecipientEmail() {
+        const email = recipientEmailsInput.value.trim();
+        if (email && isValidEmail(email) && !recipientEmails.includes(email)) {
+            recipientEmails.push(email);
+            updateRecipientEmailTags();
+            recipientEmailsInput.value = '';
+        }
+    }
+
+    function updateRecipientEmailTags() {
+        const tagsContainer = recipientEmailsContainer.querySelector('.tags') || document.createElement('div');
+        tagsContainer.className = 'tags';
+        tagsContainer.innerHTML = '';
+        
+        recipientEmails.forEach((email, index) => {
+            const tag = document.createElement('span');
+            tag.className = 'tag';
+            tag.innerHTML = `
+                <span>${email}</span>
+                <span class="tag-remove" onclick="removeRecipientEmail(${index})">&times;</span>
+            `;
+            tagsContainer.appendChild(tag);
         });
 
+        if (!recipientEmailsContainer.contains(tagsContainer)) {
+            recipientEmailsContainer.insertBefore(tagsContainer, recipientEmailsInput);
+        }
+    }
 
-    </script>
+    function removeRecipientEmail(index) {
+        recipientEmails.splice(index, 1);
+        updateRecipientEmailTags();
+    }
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function cancel(){
+        // Pour cacher le modal
+        document.querySelector('.modal-overlay').style.display = 'none';
+    }
+
+    transferForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Ici, vous pouvez ajouter la logique pour envoyer les dossiers, les fichiers et les informations du formulaire\
+        document.querySelector('.modal-overlay').style.display = 'flex';
+
+        console.log('Dossiers à envoyer:', folders);
+        console.log('Fichiers individuels à envoyer:', files);
+        console.log('Emails des destinataires:', recipientEmails);
+        console.log('Informations du formulaire:', new FormData(transferForm));
+    });
+
+
+</script>
 </body>
 </html>
