@@ -91,6 +91,98 @@
         top: 0px;
         color: white; 
     }
+
+    .floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #0256d3;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .floating-btn.active {
+            transform: rotate(45deg);
+        }
+
+        .btn-round {
+            position: fixed;
+            bottom: 45px;
+            right: 37px;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .btn-round.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Animation for vertical buttons */
+        .btn-1.show {
+            transform: translateY(-70px);
+        }
+
+        .btn-2.show {
+            transform: translateY(-140px);
+        }
+
+        .btn-3.show {
+            transform: translateY(-210px);
+        }
+
+        .btn-4.show {
+            transform: translateY(-280px);
+        }
+
+        .btn-5.show {
+            transform: translateY(-350px);
+        }
+
+        /* Text when hovering buttons */
+        .btn-round::before {
+            content: attr(data-text); /* Use the data-text attribute for the label */
+            position: absolute;
+            right: 60px; /* Position to the left of the button */
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            white-space: nowrap;
+            pointer-events: none; /* Ensure the text doesn't interfere with clicking the button */
+            font-size: 14px;
+        }
+
+        .btn-round:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body>
@@ -112,17 +204,45 @@
         </form>
     </div>
 
-    <!-- Bouton flottant pour la navigation -->
-    <div class="floating-btn" onclick="navigateTo('user.php')">
-        <i class="fas fa-user-plus"></i>
-    </div>
+    <!-- bouton de navigations -->
 
-    <h6 class="centered-bottom trans"><span class="actr" style="font-size:.9em;color: #fff;">Powered by</span> data<span style="color:#02c8fa">xell</span></h6>
+        <!-- Floating Button -->
+        <div class="floating-btn" id="mainBtn">
+            <i class="fas fa-plus"></i>
+        </div>
 
-    <script>
-        function navigateTo(page) {
-            window.location.href = page;
-        }
+        <!-- Round Buttons -->
+        <a href="index.php" class="btn-round btn-1" data-text="Transfert">
+            <i class="fas fa-bolt"></i>
+        </a>
+        <a href="user.php" class="btn-round btn-2" data-text="Add User">
+            <i class="fas fa-user-plus"></i>
+        </a>
+        <a href="#!" class="btn-round btn-3" data-text="Add Group">
+            <i class="fas fa-user-group"></i>
+        </a>
+        <a href="#!" class="btn-round btn-4" data-text="Afficher">
+            <i class="far fa-user"></i>
+        </a>
+        <a href="group-list.php" class="btn-round btn-5" data-text="Groupes">
+            <i class="fa-solid fa-layer-group"></i>
+        </a>
+<!-- bouton de navigations -->
+
+        <h6 class="centered-bottom trans" style="font-size:.7em"><span class="actr" style="font-size:.9em;color: #fff;">Powered by</span> data<span style="color:#02c8fa">xell</span></h6>
+
+        <script>
+        const mainBtn = document.getElementById('mainBtn');
+        const btns = document.querySelectorAll('.btn-round');
+
+        mainBtn.addEventListener('click', () => {
+            mainBtn.classList.toggle('active');
+            btns.forEach((btn, index) => {
+                setTimeout(() => {
+                    btn.classList.toggle('show');
+                }, index * 50); // Delay each button's appearance slightly
+            });
+        });
     </script>
 </body>
 </html>

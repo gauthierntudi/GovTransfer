@@ -128,7 +128,7 @@
         </form>
         <div class="login-footer">
             <p>
-                <a href="#" class="text-primary">
+                <a href="index.php" class="text-primary">
                 Retour à la page envoi
                 </a>
             </p>
@@ -138,7 +138,7 @@
     </div>
 
 
-    <h6 class="centered-bottom trans"><span class="actr" style="font-size:.9em;color: #fff;">Powered by</span> data<span style="color:#02c8fa">xell</span></h6>
+    <h6 class="centered-bottom trans" style="font-size:.7em"><span class="actr" style="font-size:.9em;color: #fff;">Powered by</span> data<span style="color:#02c8fa">xell</span></h6>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
