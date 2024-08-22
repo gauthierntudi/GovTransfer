@@ -22,7 +22,9 @@
         }
         body {
             margin: 0;
-            height: 100vh;
+            padding-top: 90px;
+            padding-bottom: 50px;
+            height: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -249,6 +251,575 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Utilisateur 2</td>
+                    <td>utilisateur2@example.com</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editUser(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteUser(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
                     <td>2</td>
                     <td>Utilisateur 2</td>
                     <td>utilisateur2@example.com</td>

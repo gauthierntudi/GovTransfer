@@ -22,7 +22,9 @@
         }
         body {
             margin: 0;
-            height: 100vh;
+            height: auto;
+            padding-top: 90px;
+            padding-bottom: 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -257,6 +259,295 @@
                         </button>
                     </td>
                 </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr><tr>
+                    <td>2</td>
+                    <td>Groupe 2</td>
+                    <td class="action-buttons">
+                        <button class="btn-circle btn-edit" onclick="editGroup(2)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn-circle btn-delete" onclick="deleteGroup(2)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+                
                 <tr>
                     <td>3</td>
                     <td>Groupe 3</td>
